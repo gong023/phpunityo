@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export YO_API_TOKEN="f4666be1-737c-443e-a9ae-53f244f7631c"
+#export YO_API_TOKEN=""
 
 TOP_DIR=`dirname "${0}"`/../
 

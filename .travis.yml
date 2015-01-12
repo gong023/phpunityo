@@ -1,0 +1,11 @@
+language: php
+sudo: false
+php:
+- 5.4
+before_script:
+- composer install
+script:
+- test/failLocal.sh
+env:
+  global:
+    secure: CAhYogvVGld748Gwyax5WmQzEIPW1O0HywI44obz0r9WEtWIVP8oT5lqKOu3U0cESf/XX0CK84CY5mQliqPNjpv0dV4G9dW+WoZUmd16Brr3q9Ix7yl3KivgWfjXd64xT47mYpoR6ynenF4+CmsjbZnokTEIbNnyV9d3MwmwjZw=
