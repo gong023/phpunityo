@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="test/bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="PHPUnityo Test Suite">
+            <directory suffix="Test.php">test/PHPUnityo/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>.</directory>
+            <exclude>
+                <directory>./test</directory>
+                <directory>./vendor</directory>
+                <directory>./build</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <listeners>
+        <listener class="PHPUnit_Yo" file="src/PHPUnit_Yo.php">
+            <arguments>
+                <string name="sendUser">gonge</string>
+                <string name="onSuccess">true</string>
+                <string name="onFailure">true</string>
+            </arguments>
+        </listener>
+    </listeners>
+
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+    </logging>
+</phpunit>
